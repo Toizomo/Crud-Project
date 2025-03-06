@@ -27,6 +27,7 @@
     <body>
     <main>
         <div>
+            <h2>Registrar un usuario</h2>
             <form action="" method="post">
                 <label for="cedula">Cédula</label>
                 <input type="text" id="cedula" name="cedula" required>
