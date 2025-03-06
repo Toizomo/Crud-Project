@@ -8,7 +8,7 @@
         exit();
     }
     if(isset($_POST['editar'])){
-        $controlador->editar($_GET['id'], $_POST['cedula'], $_POST['nombres'], $_POST['apellidos'], $_POST['usuario'], $_POST['clave']);
+        $controlador->editar($_GET['id'], $_POST['nombres'], $_POST['apellidos'], $_POST['usuario'], $_POST['clave']);
         header("Location: index.php");
         exit();
     }
@@ -42,7 +42,6 @@
     <table>
         <thead>
             <tr>
-                <th>Cédula</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Usuario</th>
@@ -53,9 +52,6 @@
         <tbody>
             <tr>
                 <!-- La cédula la dejamos de solo lectura si no debe editarse -->
-                <td>
-                    <input type="text" name="cedula" value="<?php echo $registro['cedula']; ?>" readonly>
-                </td>
                 <td>
                     <input type="text" name="nombres" value="<?php echo $registro['nombres']; ?>">
                 </td>
