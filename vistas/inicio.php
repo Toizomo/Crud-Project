@@ -24,37 +24,7 @@
         }
     </style>
 </head>
-    <body>
-    <main>
-        <div>
-            <h2>Registrar un usuario</h2>
-            <form action="" method="post">
-                <label for="cedula">Cédula</label>
-                <input type="text" id="cedula" name="cedula" required>
-                
-                <label for="nombres">Nombres</label>
-                <input type="text" id="nombres" name="nombres" required>
-                
-                <label for="apellidos">Apellidos</label>
-                <input type="text" id="apellidos" name="apellidos" required>
-                
-                <label for="usuario">Usuario</label>
-                <input type="text" id="usuario" name="usuario" required>
-                
-                <label for="clave">Clave</label>
-                <input type="password" id="clave" name="clave" required>
-                
-                <button type="submit" name="enviar">Registrar</button>
-            </form>
-        </div>
-        
-        <?php
-            if (isset($_POST["enviar"])) {
-                $res = $controlador->crear($_POST["cedula"], $_POST["nombres"], $_POST["apellidos"], $_POST["usuario"], $_POST["clave"]);
-                echo $res ? "¡Se ha realizado el registro con éxito!" : "ERROR: Falla en realizar el registro";
-            }
-        ?>
-
+<a href='?cargar=crear&id=" . $fila["id"] . "'>Registrar</a>
         <table>
             <thead>
                 <tr>
@@ -80,7 +50,7 @@
                         echo "<td>
                                 <a href='?cargar=ver&id=" . $fila["id"] . "'>Ver</a> |
                                 <a href='?cargar=editar&id=" . $fila["id"] . "'>Editar</a> |
-                                <a href='?cargar=eliminar&id=" . $fila["id"] . "'>Eliminar</a>
+                                <a href='?cargar=eliminar&id=" . $fila["id"] . "'>Eliminar</a>|
                               </td>";
                         echo "</tr>";
                     }
